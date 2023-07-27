@@ -15,7 +15,7 @@ flowchart LR %% Specify diagram type ('flowchart') and direction ('LR' == Left-R
     direction LR %% Set direction of isolated subgraphs
     A(Job Router) --> B[[CE schedd]]
     B --> C{Grid Mgr.}
-    D ---|Log job| C
+    D[(Log)] ---|Log job| C
   end
   subgraph Blahp %% Subgraph names == Uppercase; node names == lowercase
     direction LR
