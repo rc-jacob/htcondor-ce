@@ -14,9 +14,7 @@ flowchart LR
 		a[sshd] --> b[blahp]
 		c[sshd] --> d[FTGahp]
 		d -. SSH Tunnel .- c
-		e[osg] --> f[osg/rdo-null]
 	end
-id1[(FTP)] --> |condor|e
 id2>Job Ad] --> 1
 4 ===|Blahp:</br>stdin</br>stdout</br>stderr| a
 5 ===|File:</br>stdin</br>stdout</br>stderr| c
