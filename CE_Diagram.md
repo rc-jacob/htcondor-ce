@@ -34,13 +34,11 @@ flowchart LR %% Specify diagram type ('flowchart') and direction ('LR' == Left-R
   end
   %% - External nodes below this point -
   0>Job Ad]
-  1[blin.sh]
   %% - End External Nodes
   %% - Link nodes and subgraphs here -
   C <--> E
   lsf_*.sh --> G
   0 --> A
-  1 --> lsf_*.sh
   %% - End Links
 %% -- Body --
 ```
