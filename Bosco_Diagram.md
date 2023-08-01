@@ -1,21 +1,31 @@
 Bosco Overview
 ===
 ```mermaid
+%% -- HEADER --
 flowchart LR
+%% -- HEADER --
+%% -- BODY --
+%% External nodes are numbered (0 - 100)
+%% Internal nodes are alphabetic (A - Z)
 	subgraph Bosco
-		1[Schedd] --> 2[Grid</br>Manager]
-		3[SP] --> 2
-		2 --- 4[SSH]
-		2 --- 5[SSH]
-		5 --> |FT|2
-		3 -. Data Channel .- 5
+		A[Schedd] --> B[Grid</br>Manager]
+		C[SP] --> B
+		B --- D[SSH]
+		B --- E[SSH]
+		E --> |FT|B
+		C -. Data Channel .- E
 	end
 	subgraph Remote Submit
-		a[sshd] --> b[blahp]
-		c[sshd] --> d[FTGahp]
-		d -. SSH Tunnel .- c
+		F[sshd] --> G[blahp]
+		H[sshd] --> I[FTGahp]
+		H -. SSH Tunnel .- I
 	end
-id2>Job Ad] --> 1
-4 ===|Blahp:</br>stdin</br>stdout</br>stderr| a
-5 ===|File:</br>stdin</br>stdout</br>stderr| c
+%% - EXTERNAL NODES BELOW THIS POINT -
+0>Job Ad] --> A
+%% - End External Nodes -
+%% - Link nodes and subgraphs here -
+D ===|Blahp:</br>stdin</br>stdout</br>stderr| F
+E ===|File:</br>stdin</br>stdout</br>stderr| H
+%% - End Links
+%% -- BODY --
 ```
